@@ -2,10 +2,18 @@
 
 function alphabetPosition(text) {
     const result = [];
-    
-    
-    
-    return result;
+    const validText = text.toLowerCase().split(' ').join('');
+    const alphabet = ' abcdefghijklmnopqrstuvwxyz';
+
+    for (let i = 0; i < validText.length; i++) {
+        let letter = validText[i];
+
+        if (alphabet.includes(letter)) {
+            result.push(alphabet.indexOf(letter));
+        }
+    }
+
+    return result.join(' ');
 }
 
 console.log(
